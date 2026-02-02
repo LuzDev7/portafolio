@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrolladora Web | Portafolio Luz Guerra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <div class="cursor-glow"></div>
+    <canvas id="bg-canvas"></canvas>
+
+    <header>
+        <nav>
+            <div class="logo">Lu7<span>Dev</span></div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2 class="reveal-text">Hola, soy Luz Karina Guerra</h2>
+                <h1 class="reveal-text">Desarrolladora Web</h1>
+                <p class="hero-bio">Creando experiencias digitales modernas, limpias y funcionales. Transformo ideas en
+                    realidad con un enfoque en diseño y usabilidad.</p>
+                <div class="hero-cta">
+                    <a href="https://github.com/LuzDev7" target="_blank" class="btn btn-primary">GitHub <i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/luz-guerra7" target="_blank" class="btn btn-secondary">LinkedIn
+                        <i class="fab fa-linkedin"></i></a>
+                    <a href="Luz Karina Guerra Izquierdo_CV.pdf" download class="btn btn-secondary">Descargar CV <i
+                            class="fas fa-file-download"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-frame">
+                    <img src="LKG.jpg" alt="Perfil">
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">Tecnologías</h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-skill="python">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="skill-card" data-skill="php">
+                    <i class="fab fa-php"></i>
+                    <span>PHP</span>
+                </div>
+                <div class="skill-card" data-skill="js">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-card" data-skill="nodejs">
+                    <i class="fab fa-node-js"></i>
+                    <span>Node.js</span>
+                </div>
+                <div class="skill-card" data-skill="sql">
+                    <i class="fas fa-database"></i>
+                    <span>SQL / PostgreSQL</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <div class="projects-container">
+
+                <!-- Project 1: LuzShop -->
+                <div class="project-slot" onclick="window.open('https://poyecto-final-test-2.onrender.com', '_blank')"
+                    style="background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+                    <div class="project-hover-content">
+                        <h3>LuzShop</h3>
+                        <p>Tu ropa merece una segunda historia. Plataforma de moda sostenible.</p>
+                    </div>
+                </div>
+
+                <!-- Placeholder Project 2 -->
+                <div class="project-slot">
+                    <div class="project-hover-content">
+                        <h3>Gestor de Tareas</h3>
+                        <p>Aplicación de productividad para equipos ágiles.</p>
+                    </div>
+                </div>
+
+                <!-- Placeholder Project 3 -->
+                <div class="project-slot">
+                    <div class="project-hover-content">
+                        <h3>Dashboard Financiero</h3>
+                        <p>Visualización de datos y reportes en tiempo real.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2 style="margin-bottom: 1rem; font-family: var(--font-heading);">¿Hablamos?</h2>
+                    <p>Estoy disponible para nuevos proyectos y oportunidades laborales. ¡Contáctame!</p>
+                    <div class="contact-links">
+                        <a href="mailto:tuemail@ejemplo.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>luzguerra@ejemplo.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/luz-guerra7" target="_blank" class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span>/luz-guerra7</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formsubmit.co/luzwar777@gmail.com" method="POST">
+                    <!-- Disable Captcha for cleaner experience -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Redirect back to page after submission (optional, requires live URL, using default success page for now) -->
+
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Nombre" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="message" placeholder="Tu mensaje..." rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Robot Companion -->
+    <div class="robot-companion">
+        <div class="robot-body">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="robot-glow"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Luz Guerra. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
