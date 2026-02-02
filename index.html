@@ -136,7 +136,8 @@
                 <form class="contact-form" action="https://formsubmit.co/luzwar777@gmail.com" method="POST">
                     <!-- Disable Captcha for cleaner experience -->
                     <input type="hidden" name="_captcha" value="false">
-                    <!-- Redirect back to page after submission (optional, requires live URL, using default success page for now) -->
+                    <!-- Dynamic Redirect (Value set by JS) -->
+                    <input type="hidden" name="_next" id="redirect-input">
 
                     <div class="input-group">
                         <input type="text" name="name" placeholder="Nombre" required>
