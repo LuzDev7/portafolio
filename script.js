@@ -84,10 +84,44 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(draw, 50);
     }
 
-    // Set dynamic redirect for form (so it returns to Render, not Localhost)
-    const redirectInput = document.getElementById('redirect-input');
-    if (redirectInput) {
-        redirectInput.value = window.location.href;
+    // AJAX Form Submission (No Redirect)
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+
+            submitBtn.innerText = 'Enviando...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(this);
+
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert('¡Mensaje enviado con éxito! Te responderé lo antes posible.');
+                        contactForm.reset();
+                    } else {
+                        alert('Hubo un error al enviar el mensaje. Por favor intenta nuevamente.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Hubo un error de conexión. Por favor intenta nuevamente.');
+                })
+                .finally(() => {
+                    submitBtn.innerText = originalBtnText;
+                    submitBtn.disabled = false;
+                });
+        });
     }
 
     // Sound Logic (Audio Context)
